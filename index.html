@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmers' Dashboard</title>
+    <title>Farmers' Portal</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
 <body>
     <header>
-        <h1>Krishi Dashboard</h1>
+        <h1>Farmers' Portal</h1>
         <nav>
             <button class="hamburger" onclick="toggleMenu()">☰</button>
             <div class="nav-links">
@@ -23,60 +21,16 @@
                 <button onclick="showSection('help-desk')">Help Desk</button>
             </div>
         </nav>
-        
     </header>
-
     <main>
-        <section id="weather" class="hidden">
-            <h2>Weather Updates</h2>
-            <p>Current weather data will be displayed here.</p>
-        </section>
-
-        <section id="market" class="hidden">
-            <h2>Market Prices</h2>
-            <ul>
-                <li><strong>Wheat:</strong> ₹15.50/kg</li>
-                <li><strong>Corn:</strong> ₹8.75/kg</li>
-                <li><strong>Fertilizer A:</strong> ₹500/bag</li>
-            </ul>
-        </section>
-
-        <section id="policies" class="hidden">
-            <h2>Government Policies</h2>
-            <ul>
-                <li><strong>Subsidies:</strong> Details on available subsidies for farmers.</li>
-                <li><strong>Loans:</strong> Information about low-interest loans for farmers.</li>
-                <li><strong>Policies:</strong> Latest government policies affecting agriculture.</li>
-            </ul>
-        </section>
-
-        <section id="buyers" class="hidden">
-            <h2>Potential Buyers</h2>
-            <p>List of potential buyers will be displayed here.</p>
-        </section>
-
-        <section id="krishi-doctor" class="hidden">
-            <h2>Krishi-Doctor</h2>
-            <p>Upload a picture of your crop to diagnose plant diseases.</p>
-            <input type="file" accept="image/*">
-            <button>Analyze</button>
-            <p id="diagnosis-result">Diagnosis results will appear here.</p>
-        </section>
-
-        <section id="help-desk" class="hidden">
-            <h2>Help Desk</h2>
-            <p>Contact our help desk for support and assistance.</p>
-            <ul>
-                <li>Email: support@farmersdashboard.com</li>
-                <li>Phone: +91-1234567890</li>
-            </ul>
-        </section>
+        <!-- Sections for content -->
+        <section id="weather" style="display:none;">Weather Information</section>
+        <section id="market" style="display:none;">Market Prices (Grain, Fertilizers, etc.)</section>
+        <section id="policies" style="display:none;">Government Policies (Subsidies, Loans, etc.)</section>
+        <section id="buyers" style="display:none;">Potential Buyers</section>
+        <section id="krishi-doctor" style="display:none;">Krishi-Doctor: Diagnose Crop Diseases</section>
+        <section id="help-desk" style="display:none;">Help Desk</section>
     </main>
-
-    <footer>
-        <p>© 2024 Farmers' Dashboard</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

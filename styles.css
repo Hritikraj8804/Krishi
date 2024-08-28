@@ -1,109 +1,44 @@
+/* Basic Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
 header {
     background-color: #4CAF50;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav {
-    margin: 10px 0;
+    padding: 20px;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav button {
-    margin: 5px;
-    padding: 10px 15px;
+h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Navigation Styling */
+nav {
+    position: relative; /* Relative positioning to align items within */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links button {
+    background-color: transparent;
     border: none;
-    background-color: #333;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
-    flex: 1;
-    max-width: 150px;
+    font-size: 16px;
 }
 
-nav button:hover {
-    background-color: #555;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-.hidden {
-    display: none;
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/*
- Responsive Design 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav button {
-        margin: 5px 0;
-        width: 100%;
-    }
-
-    main {
-        padding: 10px;
-    }
-}
-*/
-
-/* Hamburger Button */
 .hamburger {
-    display: none;
+    display: none; /* Hidden on larger screens */
     font-size: 24px;
     background: none;
     border: none;
@@ -114,25 +49,27 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Hidden by default on small screens */
         flex-direction: column;
-        width: 100%;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: 20px;
+        background-color: #4CAF50;
+        padding: 10px;
+        border-radius: 5px;
     }
 
     .nav-links.show {
-        display: flex;
+        display: flex; /* Show the links when the hamburger is clicked */
     }
 
     .hamburger {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 20px;
+        display: block; /* Show the hamburger on smaller screens */
     }
 
     nav button {
         margin: 5px 0;
-        width: 100%;
+        width: 100%; /* Full width for buttons */
+        text-align: left; /* Align text to the left */
     }
 }
-
