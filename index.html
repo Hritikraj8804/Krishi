@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmers' Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <header>
-        <h1>Farmers' Dashboard</h1>
+        <h1>Krishi Dashboard</h1>
         <nav>
-            <button onclick="showSection('weather')">Weather</button>
-            <button onclick="showSection('market')">Market Prices</button>
-            <button onclick="showSection('policies')">Government Policies</button>
-            <button onclick="showSection('buyers')">Potential Buyers</button>
-            <button onclick="showSection('krishi-doctor')">Krishi-Doctor</button>
-            <button onclick="showSection('help-desk')">Help Desk</button>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <div class="nav-links">
+                <button onclick="showSection('weather')">Weather</button>
+                <button onclick="showSection('market')">Market Prices</button>
+                <button onclick="showSection('policies')">Government Policies</button>
+                <button onclick="showSection('buyers')">Potential Buyers</button>
+                <button onclick="showSection('krishi-doctor')">Krishi-Doctor</button>
+                <button onclick="showSection('help-desk')">Help Desk</button>
+            </div>
         </nav>
+        
     </header>
 
     <main>

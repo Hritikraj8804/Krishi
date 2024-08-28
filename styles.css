@@ -83,7 +83,8 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design */
+/*
+ Responsive Design 
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -98,3 +99,40 @@ footer {
         padding: 10px;
     }
 }
+*/
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    nav button {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
