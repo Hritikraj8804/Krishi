@@ -1,11 +1,21 @@
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show'); // Toggle visibility of nav links
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Show the default section (weather)
+    showSection('weather');
+});
 
 function showSection(sectionId) {
-    // Hide all sections first
-    document.querySelectorAll('main section').forEach(section => section.style.display = 'none');
+    // Hide all sections
+    const sections = document.querySelectorAll('main section');
+    sections.forEach(section => {
+        section.classList.add('hidden');
+    });
+
     // Show the selected section
-    document.getElementById(sectionId).style.display = 'block';
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.remove('hidden');
+}
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
 }
