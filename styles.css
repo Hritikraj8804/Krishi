@@ -107,6 +107,61 @@ li:last-child {
     border-bottom: none;
 }
 
+/* Krishi-Doctor Section Styling */
+#krishi-doctor {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#krishi-doctor h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.file-input:hover {
+    border-color: #388E3C;
+}
+
+.analyze-button {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.analyze-button:hover {
+    background-color: white;
+    color: #4CAF50;
+    border-color: #388E3C;
+}
+
+#diagnosis-result {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
 footer {
     text-align: center;
     padding: 10px;
