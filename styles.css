@@ -28,7 +28,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Relative positioning to align items within */
+    position: relative;
 }
 
 .nav-links {
@@ -42,11 +42,10 @@ nav {
     color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
 }
 
 .hamburger {
-    display: none; /* Hidden on larger screens */
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
@@ -64,11 +63,12 @@ nav button {
     border-radius: 5px;
     flex: 1;
     max-width: 150px;
+    transition: background-color 0.3s;
 }
 
 nav button:hover {
     background-color: #555;
-    border: 1px solid white; /* Border color for differentiation */
+    border: 1px solid white;
 }
 
 main {
@@ -80,7 +80,7 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .hidden {
@@ -162,7 +162,7 @@ li:last-child {
     background-color: #fff;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -177,32 +177,45 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         background-color: transparent;
-        border: 2px solid white; /* Border color for differentiation */
-        display: none; /* Hidden by default on small screens */
+        border: 2px solid white;
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Position below the header */
+        top: 60px;
         right: 20px;
         background-color: #4CAF50;
         padding: 10px 20px;
         border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+        transition: all 0.3s ease-in-out;
     }
 
     .nav-links.show {
-        display: flex; /* Show the links when the hamburger is clicked */
+        display: flex;
+        animation: fadeIn 0.5s ease-out;
     }
 
     .hamburger {
-        display: block; /* Show the hamburger on smaller screens */
+        display: block;
     }
 
     nav button {
         margin: 5px 0;
-        width: 100%; /* Full width for buttons */
-        text-align: left; /* Align text to the left */
-        border: 2px solid white; /* Border color for buttons in the menu */
-        border-radius: 5px; /* Rounded corners */
-        padding: 10px; /* Padding for better touch area */
+        width: 100%;
+        text-align: left;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
