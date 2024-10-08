@@ -25,7 +25,7 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/farmers-portal.git
+   git clone https://github.com/Hritikraj8804/Krishi.git
    cd farmers-portal
    ```
 
